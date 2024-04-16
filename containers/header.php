@@ -1,8 +1,7 @@
-<?php include './database/db.php'; ?>
+<?php include './database/db.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +10,8 @@
   <title>Leave Feedback</title>
 </head>
 
-<body>
-  <nav class="fixed w-full top-0 bg-white shadow dark:bg-gray-800">
+<body class="">
+  <nav class="top-0 bg-white shadow dark:bg-gray-800">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -43,12 +42,12 @@
           <!-- Desktop Navbar Buttons -->
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <a href="/php_feedback/index.php"
-                class="bg-gray-900 text-gray-300 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-400 hover:text-white <?php echo basename($_SERVER['REQUEST_URI']) == 'index.php' ? 'text-white' : ''; ?>">Home</a>
-              <a href="/php_feedback/feedback.php"
-                class="text-gray-300 hover:bg-gray-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium <?php echo basename($_SERVER['REQUEST_URI']) == 'feedback.php' ? 'text-white' : ''; ?>">Feedback</a>
-              <a href="/php_feedback/about.php"
-                class="text-gray-300 hover:bg-gray-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium <?php echo basename($_SERVER['REQUEST_URI']) == 'about.php' ? 'text-white' : ''; ?>">About</a>
+              <a href="/php_feedback/index.php" class="bg-gray-900 text-gray-300 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-400 hover:text-white 
+                <?php echo basename($_SERVER['REQUEST_URI']) == 'index.php' ? 'text-white' : ''; ?>">Home</a>
+              <a href="/php_feedback/feedback.php" class="text-gray-300 hover:bg-gray-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium 
+                <?php echo basename($_SERVER['REQUEST_URI']) == 'feedback.php' ? 'text-white' : ''; ?>">Feedback</a>
+              <a href="/php_feedback/about.php" class="text-gray-300 hover:bg-gray-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium 
+                <?php echo basename($_SERVER['REQUEST_URI']) == 'about.php' ? 'text-white' : ''; ?>">About</a>
             </div>
           </div>
         </div>
@@ -93,16 +92,16 @@
       </div>
     </div>
   </nav>
-
-  <script>
-  // Toggle Mobile Menu
-  function toggleMobileMenu() {
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenu.classList.contains('hidden')) {
-      mobileMenu.classList.remove('hidden');
-    } else {
-      mobileMenu.classList.add('hidden');
-    }
-  }
-  </script>
 </body>
+
+<script>
+// Toggle Mobile Menu
+function toggleMobileMenu() {
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileMenu.classList.contains('hidden')) {
+    mobileMenu.classList.remove('hidden');
+  } else {
+    mobileMenu.classList.add('hidden');
+  }
+}
+</script>

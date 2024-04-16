@@ -13,20 +13,23 @@
 <?php endif; ?>
 
 <?php foreach ($feedback as $item): ?>
-<div class="my-32 sm:mt-20 w-1/2 lg:w-1/4 mx-auto">
+<div class="my-32 ooverflow-x-auto sm:mt-20 w-1/2 lg:w-1/4 mx-auto">
   <div class="text-center">
-    <h2 class="text-xl font-bold mb-4 text-indigo-600 border rounded-md shadow">Feedback <?php echo $item[
-         'id'
-       ]; ?></h2>
-    <?php echo $item['body']; ?>
+    <h2 class="text-xl font-bold mb-4 text-indigo-600 border rounded-md shadow">Feedback
+      <?php echo $item['id']; ?>
+    </h2>
+    <h2 class="overflow-hidden">
+      <?php echo $item['body']; ?>
+    </h2>
     <div class="mt-2">
-      <h3 class="text-end font-bold"><span class="font-light">By</span> <?php echo $item[
-         'first_name'
-       ]; ?></h3>
-      <h3 class="text-end font-semibold mb-2"><span class="font-light">on</span> <?php echo date_format(
-   date_create($item['date']),
-   'l jS F Y'
- ); ?></h3>
+      <h3 class="text-end font-bold">
+        <span class="font-light">By</span>
+        <?php echo $item['first_name']; ?>
+      </h3>
+      <h3 class="text-end font-semibold mb-2">
+        <span class="font-light">on</span>
+        <?php echo date_format(date_create($item['date']), 'l jS F Y'); ?>
+      </h3>
       <hr>
     </div>
   </div>
