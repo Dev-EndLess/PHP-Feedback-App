@@ -81,3 +81,4 @@ $first_name_error = $last_name_error = $email_error = $body_error = '';
 </div>
 
 <?php include 'containers/footer.php'; ?>
+
